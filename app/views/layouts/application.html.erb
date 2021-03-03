@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Threadly</title>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Montserrat:400,700' %>
+    <%= stylesheet_link_tag 'application', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <h1><%= link_to "threadly", root_path %></h1>
+            <% if user_signed_in? %>
+              <%= link_to 'Account', edit_user_registration_path ,:class => 'btn btn-default su'%>
+              <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :class => 'btn btn-default'  %>
+            </ul>
+            <% else %>
+              <%= link_to new_user_registration_path do %>
+                <button class="btn btn-default su">Sign up</button>
+              <% end  %>
+              <%= link_to new_user_session_path do %>
+                <button class="btn btn-default">Sign in</button>
+              <% end  %>
+            <% end  %>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+    <% end  %>
+
+    <%= yield %>
+  </body>
+</html>
