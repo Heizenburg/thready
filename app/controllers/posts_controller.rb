@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to post_url, notice: 'Link was successfully destroyed.' }
+      format.html { redirect_to post_url, notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
