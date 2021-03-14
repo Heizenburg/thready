@@ -1,0 +1,9 @@
+<div class="main">
+  <div class="container">
+    <ul class="comments" id="comments">
+      <% @users.each do |user| %>
+        <li><%= user.email %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
