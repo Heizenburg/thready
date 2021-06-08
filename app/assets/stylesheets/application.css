@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
 html,
@@ -106,7 +107,7 @@ button:active {
 }
 
 .btn {
-  background: darkgrey;
+  background: #00f28f;
   border: none;
   color: white;
   cursor: pointer;
@@ -138,7 +139,6 @@ li {
   font-weight: 100;
   padding: 20px;
   box-shadow: 0.1px 0.3px 0.5px 0.1px rgba(0, 0, 0, .1);
-  ;
   margin: 0 0 36px;
 }
 
@@ -185,9 +185,7 @@ a.links:active {
   text-decoration: none;
 }
 
-/*
-   *  STYLE SCROLLER
-   */
+/* STYLE SCROLLER */
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -332,4 +330,19 @@ pre {
 
 .label {
   color: grey;
+}
+
+label.remember-label {
+  margin-right: -72px;
+}
+
+div#checkbox {
+  display: inline-block;
+  padding-right: 0px;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+input#user_remember_me {
+  margin-left: -6px;
 }
