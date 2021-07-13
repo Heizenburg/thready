@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
 
-
   def index
     @users = User.find_by(params[:id])
     @posts = Post.all.order("created_at DESC")

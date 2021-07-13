@@ -1,3 +1,42 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+// Place all the styles related to the errors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Errors include 404 and a 500
+
+#error-wrapper {
+    // background: #fff;
+    .error-view {
+      font-weight: 600;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 8em;
+      background: white;
+      margin-bottom: 2em;
+      border-radius: 2px;
+      width: 22em;
+      border: 1px solid #e9e9e9;
+      height: 15em;
+      padding-top: 50px;
+      .error-heading {
+        font-size: 20px;
+        letter-spacing: 0.1px;
+        color: rgba(52, 50, 75, 0.83);
+        i { color: crimson; }
+      }
+      p {
+        font-size: 14.4px;
+        font-weight: 600;
+        margin: 0 auto;
+        color: rgba(52, 50, 75, 0.73);
+      }
+      .options {
+        margin-top: 30px;
+        img { border-radius: 3em; }
+        a { color: rgba(52, 50, 75, 0.73); }
+      }
+    }
+  }
+  
